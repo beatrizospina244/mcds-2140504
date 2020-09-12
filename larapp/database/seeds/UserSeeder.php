@@ -33,7 +33,10 @@ class UserSeeder extends Seeder
          $usr->address = 'pensilvania';
          $usr->password =bcrypt('customer');
          $usr->save();
-           
+     
+        //Factory
+        factory(User::class,100)->create();
+        
          
     }
 }
