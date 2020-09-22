@@ -50,4 +50,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //DEFINIR UN METODO PUBLICO
+    public function games() {
+        return $this->hasMany('App\Game');
+    }
+
 }
